@@ -23,6 +23,18 @@ body {
   display: none;
 }
 
+.icon {
+  display: none;
+}
+
+#myaccordion:hover .icon {
+  display: block;
+  width: 0.6rem;
+  height: 0.6rem;
+  background-image: url(./plus-solid.svg);
+  background-repeat: no-repeat;
+}
+
 #myaccordion label {
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
   display: block;    
@@ -35,8 +47,17 @@ body {
   font-size: 0.6rem;
 }
 #myaccordion label:hover {
-  /* background: #5f75ff; */
+  color: #000;
   background: #e78d31;
+  box-shadow: 2px 5px 7px 5px #d6abab69
+}
+
+#myaccordion label:active > .icon {
+  filter: invert(12%) sepia(98%) saturate(4470%) hue-rotate(10deg) brightness(98%) contrast(132%);
+}
+
+#myaccordion label:active {
+  color: #e50000;
 }
 
 .content {
@@ -49,11 +70,12 @@ body {
 
 #myaccordion input:checked + label + .content {
   display: block;
-  webkit-animation: fadeIn 1s cubic-bezier(0.55, 0.06, 0.68, 0.19);
-  -moz-animation: fadeIn 1s cubic-bezier(0.55, 0.06, 0.68, 0.19);
-  -o-animation: fadeIn 1s cubic-bezier(0.55, 0.06, 0.68, 0.19);
-  animation: fadeIn 1s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+  webkit-animation: fadeIn 0.6s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+  -moz-animation: fadeIn 0.6s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+  -o-animation: fadeIn 0.6s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+  animation: fadeIn 0.6s cubic-bezier(0.55, 0.06, 0.68, 0.19);
 }
+
 @-webkit-keyframes fadeIn {
   0% {
     display: none;
@@ -67,6 +89,10 @@ body {
     display: block;
     opacity: 1;
   }
+}
+
+#myaccordion input:checked + label + .content:hover {
+  box-shadow: 2px 5px 7px 5px #d6abab69
 }
 
 .title {
@@ -89,13 +115,6 @@ body {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-}
-
-.icon {
-  width: 0.6rem;
-  height: 0.6rem;
-  background-image: url(./plus-solid.svg);
-  background-repeat: no-repeat;
 }
 
 .label-title {
