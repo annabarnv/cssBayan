@@ -16,7 +16,7 @@ body {
 .container {
   max-width: 80%;
   margin: 0 auto;
-  min-height: 50px;
+  min-height: max-content;
 }
 
 .hidecontent {
@@ -26,8 +26,8 @@ body {
 #myaccordion label {
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
   display: block;    
-  padding: 8px 22px;
-  margin: 10px 0px 1px 0px;
+  padding: 0.2rem 0.4rem;
+  margin: 0.2rem 0 0.2rem 0;
   cursor: pointer;
   background: #5f75a4;
   color: #FFF;
@@ -72,7 +72,6 @@ body {
 .title {
   color: #fff;
   text-shadow: 0.1px 0.1px 6px rgb(97, 87, 132);
-  font-size: 18px;
   font-weight: 400;
   font-family: 'Poppins', sans-serif;
 }
@@ -81,4 +80,24 @@ body {
   display: block;
   margin: 0 auto;
   width: 50%;
+}
+
+#myaccordion .flex-container {
+  display: flex;
+  height: 1.5rem;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  width: 0.6rem;
+  height: 0.6rem;
+  background-image: url(./plus-solid.svg);
+  background-repeat: no-repeat;
+}
+
+.label-title {
+  font-size: 0.4rem;
 }
