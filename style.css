@@ -48,8 +48,8 @@ body {
 }
 #myaccordion label:hover {
   color: #000;
-  background: #e78d31;
-  box-shadow: 2px 5px 7px 5px #d6abab69
+  background: #f8c698;
+  box-shadow: 2px 5px 7px 5px #6a676769;
 }
 
 #myaccordion label:active > .icon {
@@ -92,7 +92,7 @@ body {
 }
 
 #myaccordion input:checked + label + .content:hover {
-  box-shadow: 2px 5px 7px 5px #d6abab69
+  box-shadow: 2px 5px 7px 5px #6a676769;
 }
 
 .title {
@@ -119,4 +119,17 @@ body {
 
 .label-title {
   font-size: 0.4rem;
+}
+
+
+ 
+  #myaccordion label {
+    @media (max-width: 760px) {
+      padding: 0.3rem 0.6rem;
+      margin: 0.4rem 0 0.4rem 0;
+
+      .meme-img {
+        width: 50%;
+      }
+    }
 }
