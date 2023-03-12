@@ -24,34 +24,35 @@ body {
 }
 
 #myaccordion label {
-  box-shadow:0 0 20px #d4d4d4;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
   display: block;    
   padding: 8px 22px;
-  margin: 20px 0px 1px 0px;
+  margin: 10px 0px 1px 0px;
   cursor: pointer;
   background: #5f75a4;
   color: #FFF;
   transition: ease .5s;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
 }
 #myaccordion label:hover {
-  background: #5f75ff;
+  /* background: #5f75ff; */
+  background: #e78d31;
 }
 
 .content {
-  box-shadow:0 0 20px #d4d4d4;
   background: #ffff;
   padding: 10px 25px;
-  border: 1px solid #d4d4d4;
   margin: -1 0 0 0;
+  cursor: pointer;
+  transition: ease .5s;
 }
 
 #myaccordion input:checked + label + .content {
   display: block;
-  webkit-animation: fadeIn 0.5s ease-out;
-  -moz-animation: fadeIn 0.5s ease-out;
-  -o-animation: fadeIn 0.5s ease-out;
-  animation: fadeIn 0.5s ease-out;
+  webkit-animation: fadeIn 1s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+  -moz-animation: fadeIn 1s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+  -o-animation: fadeIn 1s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+  animation: fadeIn 1s cubic-bezier(0.55, 0.06, 0.68, 0.19);
 }
 @-webkit-keyframes fadeIn {
   0% {
