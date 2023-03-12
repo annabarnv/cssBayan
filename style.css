@@ -7,6 +7,12 @@ html {
   overflow: auto;
 }
 
+body {
+  background-color: #BFBFEA;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+}
+
 .container {
   max-width: 80%;
   margin: 0 auto;
@@ -26,6 +32,7 @@ html {
   background: #5f75a4;
   color: #FFF;
   transition: ease .5s;
+  font-size: 0.8rem;
 }
 #myaccordion label:hover {
   background: #5f75ff;
@@ -62,6 +69,15 @@ html {
 }
 
 .title {
+  color: #fff;
+  text-shadow: 0.1px 0.1px 6px rgb(97, 87, 132);
   font-size: 18px;
-  font-weight: 800;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+}
+
+.meme-img {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
 }
