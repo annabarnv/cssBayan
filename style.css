@@ -34,10 +34,11 @@ body {
 
 #myaccordion:hover .icon {
   display: block;
-  width: 0.6rem;
-  height: 0.6rem;
+  width: 2rem;
+  height: 2rem;
   background-image: url(./plus-solid.svg);
   background-repeat: no-repeat;
+  margin: 2rem;
 }
 }
 
