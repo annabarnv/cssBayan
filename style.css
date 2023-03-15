@@ -3,20 +3,23 @@
 }
 
 html {
-  scroll-behavior: smooth; 
+  scroll-behavior: smooth;
   overflow: auto;
 }
 
 body {
-  background-color: #BFBFEA;
+  background-color: #bfbfea;
   font-family: 'Poppins', sans-serif;
   font-weight: 200;
 }
 
 .container {
-  max-width: 80%;
+  max-width: 60%;
   margin: 0 auto;
   min-height: max-content;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
 }
 
 .hidecontent {
@@ -27,6 +30,8 @@ body {
   display: none;
 }
 
+@media (hover: hover) and (pointer: fine) {
+
 #myaccordion:hover .icon {
   display: block;
   width: 0.6rem;
@@ -34,26 +39,31 @@ body {
   background-image: url(./plus-solid.svg);
   background-repeat: no-repeat;
 }
+}
 
 #myaccordion label {
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
-  display: block;    
+  display: block;
   padding: 0.2rem 0.4rem;
   margin: 0.2rem 0 0.2rem 0;
   cursor: pointer;
   background: #5f75a4;
-  color: #FFF;
-  transition: ease .5s;
+  color: #fff;
+  transition: ease 0.5s;
   font-size: 0.6rem;
 }
+
+@media (hover: hover) and (pointer: fine) {
 #myaccordion label:hover {
   color: #000;
   background: #f8c698;
   box-shadow: 2px 5px 7px 5px #6a676769;
 }
+}
 
 #myaccordion label:active > .icon {
-  filter: invert(12%) sepia(98%) saturate(4470%) hue-rotate(10deg) brightness(98%) contrast(132%);
+  filter: invert(12%) sepia(98%) saturate(4470%) hue-rotate(10deg)
+    brightness(98%) contrast(132%);
 }
 
 #myaccordion label:active {
@@ -65,7 +75,7 @@ body {
   padding: 10px 25px;
   margin: -1 0 0 0;
   cursor: pointer;
-  transition: ease .5s;
+  transition: ease 0.5s;
 }
 
 #myaccordion input:checked + label + .content {
@@ -91,8 +101,10 @@ body {
   }
 }
 
+@media (hover: hover) and (pointer: fine) {
 #myaccordion input:checked + label + .content:hover {
   box-shadow: 2px 5px 7px 5px #6a676769;
+}
 }
 
 .title {
@@ -121,15 +133,13 @@ body {
   font-size: 0.4rem;
 }
 
+#myaccordion label {
+  @media (max-width: 760px) {
+    padding: 0.3rem 0.6rem;
+    margin: 0.4rem 0 0.4rem 0;
 
- 
-  #myaccordion label {
-    @media (max-width: 760px) {
-      padding: 0.3rem 0.6rem;
-      margin: 0.4rem 0 0.4rem 0;
-
-      .meme-img {
-        width: 50%;
-      }
+    .meme-img {
+      width: 50%;
     }
+  }
 }
