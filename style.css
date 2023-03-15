@@ -118,12 +118,12 @@ body {
 .meme-img {
   display: block;
   margin: 0 auto;
-  width: 50%;
+  width: 70%;
 }
 
 #myaccordion .flex-container {
   display: flex;
-  height: 4.5rem;
+  height: fit-content;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -132,7 +132,27 @@ body {
 
 .label-title {
   font-size: 2rem;
-  margin-left: 1rem;
+  margin: 1rem;
+}
+
+@media (max-width: 1280px) {
+  .title {
+    font-size: 3rem;
+  }
+  
+}
+
+@media (max-width: 1280px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+}
+
+@media (max-width: 960px) {
+  .meme-img {
+    width: 80%;
+  }
 }
 
 #myaccordion label {
@@ -145,3 +165,18 @@ body {
     }
   }
 }
+
+@media (max-width: 768px) {
+  .label-title {
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+}
+}
+
+@media (max-width: 425px) {
+  .title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: px){}
