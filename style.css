@@ -122,8 +122,6 @@ body {
   width: 80%;
   height: 0;
   transition: 0.5s;
-  margin: 1rem;
-  padding: 2rem;
 }
 
 input:checked + label .meme-img {
@@ -197,6 +195,10 @@ input:checked + label .meme-img {
   .meme-img {
     width: 80%;
   }
+
+  .container {
+    max-width: 80vw;
+  }
 }
 
 #myaccordion label {
@@ -212,8 +214,8 @@ input:checked + label .meme-img {
 
 @media (max-width: 768px) {
   .label-title {
-    font-size: 0.8rem;
-    margin-left: 0.5rem;
+    font-size: 1.8rem;
+    /* margin-left: 0.5rem; */
 }
 }
 
@@ -221,4 +223,9 @@ input:checked + label .meme-img {
   .title {
     font-size: 1rem;
   }
+
+  .label-title {
+    font-size: 1rem;
+    margin-left: 0.5rem;
+}
 }
