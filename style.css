@@ -1,0 +1,231 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow: auto;
+}
+
+body {
+  background-color: #bfbfea;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+}
+
+#myaccordion {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 60%;
+  margin: 0 auto;
+  min-height: max-content;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.meme-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0.2rem 0 0.2rem 0;
+  cursor: pointer;
+  color: #fff;
+  transition: ease 0.5s;
+  font-size: 0.6rem;
+}
+
+.meme-title {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  background: #5f75a4;
+}
+
+
+.hidecontent {
+  align-self: center;
+  width: 25vw;
+  height: 0;
+  transition: 0.5s;
+  margin-top: 1rem;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  opacity: 0;
+  transition: 0.5s;
+  background-image: url(./plus-solid.svg);
+  background-repeat: no-repeat;
+  margin: 2rem;
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+
+#myaccordion:hover .icon {
+  opacity: 1;
+}
+
+.flex-container:hover .icon {
+  transform: rotate(45deg);
+}
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+  .meme-container:hover {
+  color: #000;
+  background: #ffffff;
+  box-shadow: 2px 5px 7px 5px #6a676769;
+}
+}
+
+#myaccordion label.flex-container:active .icon {
+  filter: invert(12%) sepia(98%) saturate(4470%) hue-rotate(10deg)
+    brightness(98%) contrast(132%);
+}
+
+#myaccordion label.flex-container:active .meme-title {
+  color: #e50000;
+  transition: 0.5s;
+}
+
+#myaccordion label.flex-container:hover .meme-title {
+  background-color: blanchedalmond;
+}
+
+@media (hover: hover) and (pointer: fine) {
+#myaccordion input:checked + label + .content:hover {
+  box-shadow: 2px 5px 7px 5px #6a676769;
+}
+}
+
+.title {
+  color: #fff;
+  text-shadow: 0.1px 0.1px 6px rgb(97, 87, 132);
+  font-weight: 400;
+  font-size: 4rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+#myaccordion .flex-container {
+  cursor: pointer;
+}
+
+.meme-img {
+  align-self: center;
+  width: 80%;
+  height: 0;
+  transition: 0.5s;
+}
+
+input:checked + label .meme-img {
+  height: 100%;
+}
+
+
+@media (max-width: 2560px){
+  #myaccordion label.flex-container:hover .meme-img {
+    height: 100%;
+}
+
+  #myaccordion input:checked + label .meme-container {
+    color: #000;
+    background: #ffffff;
+    box-shadow: 2px 5px 7px 5px #6a676769;
+  }
+
+#myaccordion input:checked + label .meme-img {
+  height: 100%;
+}
+
+#myaccordion input:active + label .meme-img {
+  height: 25vh;
+}
+
+
+/* #myaccordion input:checked + label + .meme-img {
+  webkit-animation: fadeIn 0.6s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+  -moz-animation: fadeIn 0.6s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+  -o-animation: fadeIn 0.6s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+  animation: fadeIn 0.6s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+} */
+}
+
+.label-title {
+  font-size: 2rem;
+  margin: 1rem;
+}
+
+@media (max-width: 1280px) {
+  .title {
+    font-size: 3rem;
+  }
+  
+}
+
+@media (max-width: 1280px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+}
+
+@media (max-width: 960px) {
+  .meme-img {
+    width: 80%;
+  }
+
+  .container {
+    max-width: 80vw;
+  }
+}
+
+#myaccordion label {
+  @media (max-width: 760px) {
+    padding: 0.3rem 0.6rem;
+    margin: 0.4rem 0 0.4rem 0;
+
+    .meme-img {
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .label-title {
+    font-size: 1.8rem;
+    /* margin-left: 0.5rem; */
+}
+}
+
+@media (max-width: 425px) {
+  .title {
+    font-size: 1rem;
+  }
+
+  .label-title {
+    font-size: 1rem;
+    margin-left: 0.5rem;
+}
+}
